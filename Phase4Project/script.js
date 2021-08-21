@@ -121,7 +121,7 @@ function timerstart() {
         document.getElementById('inputtime').innerHTML=t.getMinutes()+':'+t.getSeconds();
         if(t.getMinutes()==0&&t.getSeconds()==0&&t.getMilliseconds()<300) {
             console.log('Time Up!!!Auto-Submitting the test');
-            window.clearInterval(myinterval);
+            onsubmitaction();
         }
         else if(t.getMinutes()<5) {
             document.getElementById('inputtime').setAttribute('class','text-danger');
